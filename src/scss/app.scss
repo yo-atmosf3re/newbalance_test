@@ -1,30 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 body {
    background-color: #ffffff;
 }
 
 .wrapper {
-   width: calc(100vw - 72px);
-   height: 100%;
-   margin: 33px auto;
-   // max-width: 1640px;
-}
+   // width: calc(100vw - 72px);
+   // height: 100%;
+   // padding: 33px auto;
 
 .header {
-
+   border-bottom: 1px solid #cfcfcfb6;
    .container{
-
+      display: flex;
+      justify-content: space-between;
+      margin: 26.45px 0 26.48px 30.31px;
    }
-   &__logo{
-
+   .header__logo{
+      
+      span {
+         font-family: 'Roboto';
+         font-style: normal;
+         font-weight: 400;
+         font-size: 18px;
+         line-height: 21px;
+      }
    }
-   &__shoppingcart{
+   .header__shoppingcart{
 
    }
 }
 
 .content {
-
+   width: calc(100vw - 72px);
+   height: 100%;
+   // padding: 33px auto;
+   
    .container {
-      
+      display: flex;
+      justify-content: space-between;
+   .content__items {
+      margin: 60px 170px 233px 170px;
+      display: grid;
+      width: 250px;
+      height: 300px;
+      grid-template: 1fr 1fr / repeat(3,250px); 
+      grid-auto-flow: column;
+      column-gap: 70px;
+      row-gap: 50px;
+         .shoes__block {
+            border: 1px solid #cfcfcf73;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .block__pic{
+               align-self: center;
+               justify-self: center;
+               img {
+                  width: 228px;
+                  height: 130px;
+               }
+            }
+            .block__title {
+               margin: 41px 0 0 15px;
+               font-family: 'Roboto';
+               font-weight: 700;
+               font-size: 14px;
+               line-height: 16.41px;
+            }
+            .block__price {
+               display: flex;
+               padding: 13px 15px 15px 15px;
+               .price__shoppingcart {
+                  width: 40px;
+                  height: 40px;
+                  border-radius: 3px;
+                  background-color: rgb(51, 102, 255);
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+               }
+               .price__number {
+                  align-self: center;
+                  margin: 0 0 0 15px;
+                  font-family: 'Roboto';
+                  font-weight: 400;
+                  font-size: 14px;
+                  line-height: 16.41px;
+                  font-style: normal;
+               }
+            }
+         }
+         }
+   .content__sidebar {
+      border-left: 1px solid #cfcfcfb6;
+      .sidebar__title{
+         font-family: 'Roboto';
+         font-style: normal;
+         font-weight: 700;
+         font-size: 18px;
+         line-height: 21px;
+      }
+
+      .sidebar__mybasket{
+         border-bottom: 1px solid #cfcfcfb6;
+         .sidebar__basket{
+         
+         }
+      }
+
+      .sidebar__receipt {
+         margin: 40px 55px 397px 41px;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+
+         .receipt__subtotal {
+            display: flex;
+            justify-content: space-between;
+            .subtotal__title {
+
+            }
+            .subtotal__price {
+
+            }
+         }
+         .receipt__tax {
+            display: flex;
+            justify-content: space-between;
+            .tax__title {
+
+            }
+            .tax__price {
+
+            }
+         }
+         .receipt__shipping {
+            display: flex;
+            justify-content: space-between;
+            .shipping__title {
+
+            }
+            .shipping__price{
+
+            }
+         }
+         .receipt__total {
+            display: flex;
+            justify-content: space-between;
+            .total__title {
+
+            }
+            .total__price {
+
+            }
+         }
+      }
+         }
    }
+}
+
 }
