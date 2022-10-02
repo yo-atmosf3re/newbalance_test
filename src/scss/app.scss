@@ -5,10 +5,7 @@ body {
 }
 
 .wrapper {
-   // width: calc(100vw - 72px);
-   // height: 100%;
-   // padding: 33px auto;
-
+   
 .header {
    border-bottom: 1px solid #cfcfcfb6;
    .container{
@@ -27,15 +24,33 @@ body {
       }
    }
    .header__shoppingcart{
-
+      margin: 7px 30px 0 0;
+      position: relative;
+      .shoppingcart__circle {
+         text-align: center;
+         font-family: 'Roboto';
+         font-style: normal;
+         font-weight: 400;
+         font-size: 10px;
+         line-height: 12px;
+         width: 13px;
+         height: 13px;
+         background-color: #3366FF;
+         color: #FFFFFF;
+         border-radius: 50%;
+         position: absolute;
+         bottom: 19px;
+         right: -7px;
+         span {
+            position: relative;
+            top: 0.5px;
+         }
+      }
    }
 }
-
 .content {
    width: calc(100vw - 72px);
    height: 100%;
-   // padding: 33px auto;
-   
    .container {
       display: flex;
       justify-content: space-between;
@@ -44,8 +59,8 @@ body {
       display: grid;
       width: 250px;
       height: 300px;
-      grid-template: 1fr 1fr / repeat(3,250px); 
-      grid-auto-flow: column;
+      grid-template: 1fr 1fr/ repeat(3,250px); 
+      grid-auto-flow: row;
       column-gap: 70px;
       row-gap: 50px;
          .shoes__block {
@@ -94,30 +109,80 @@ body {
          }
    .content__sidebar {
       border-left: 1px solid #cfcfcfb6;
+      position: relative;
       .sidebar__title{
          font-family: 'Roboto';
          font-style: normal;
          font-weight: 700;
          font-size: 18px;
          line-height: 21px;
+         margin: 40px 0 30px 40px;
       }
-
       .sidebar__mybasket{
-         border-bottom: 1px solid #cfcfcfb6;
-         .sidebar__basket{
-         
+         // border-bottom: 1px solid #cfcfcfb6;
+         position: relative;
+         .sidebar__basket {
+         display: grid;
+         height: 100px;
+         grid-template-columns: 100px 230px;
+         margin: 0 0 40px 40px;
+         grid-template-areas: 
+         'picture title cross'
+         'picture number cross';
+         position: relative;
+            .basket__picture {
+               grid-area: picture;
+               display: flex;
+               align-items: center;
+               img {
+                  width: 90px;
+                  height: 51px;
+               }
+            }
+            .basket__title {
+               grid-area: title;
+               font-family: 'Roboto';
+               font-style: normal;
+               font-weight: 400;
+               font-size: 14px;
+               line-height: 16.41px;
+               width: 202px;
+            }
+            .basket__counter {
+               grid-area: number;
+               display: flex;
+               width: 145px;
+               justify-content: space-between;
+               position: relative;
+               bottom: 10px;
+            }
+            .basket__cross {
+               grid-area: cross;
+            }
+         }
+         .sidebar__line{
+            position: absolute;
+            transform: translate(0, 0);
+            top: 230px;
+            svg {
+               bottom: 3px;
+            }
          }
       }
-
       .sidebar__receipt {
          margin: 40px 55px 397px 41px;
          display: flex;
          flex-direction: column;
          justify-content: space-between;
-
+         font-family: 'Roboto';
+         font-style: normal;
+         font-weight: 400;
+         font-size: 14px;
+         line-height: 34px;
          .receipt__subtotal {
             display: flex;
             justify-content: space-between;
+            
             .subtotal__title {
 
             }
@@ -148,6 +213,11 @@ body {
          .receipt__total {
             display: flex;
             justify-content: space-between;
+            font-family: 'Roboto';
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 34px;
+
             .total__title {
 
             }
@@ -159,5 +229,20 @@ body {
          }
    }
 }
+}
 
+@media screen and (max-width: 1640px) {
+   
+}
+@media screen and (max-width: 1200px) {
+   
+}
+@media screen and (max-width: 768px) {
+   
+}
+@media screen and (max-width: 410) {
+   
+}
+@media screen and (max-width: 1640px) {
+   
 }
