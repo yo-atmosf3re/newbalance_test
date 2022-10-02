@@ -31,6 +31,9 @@ function App() {
               <span>0</span>
             </div>
           </div>
+          <div className="header__burger">
+            <span />
+          </div>
         </div>
       </header >
       <div className="content">
