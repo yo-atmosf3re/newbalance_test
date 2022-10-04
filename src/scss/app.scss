@@ -812,6 +812,33 @@ body {
 }
 
 @media screen and (max-width: $breakpoint_xs) {
+   .header {
+      .container {
+         // overflow: hidden;
+      }
+      .header__logo {
+      }
+      .header__shoppingcart {
+         left: -50px;
+      }
+      .header__burger {
+         flex: 0 0 5% !important;
+         cursor: pointer;
+         display: block !important;
+         position: relative;
+         left: -45px;
+         top: 4px;
+      }
+      .header__burger-rotate {
+         flex: 0 0 5% !important;
+         cursor: pointer;
+         display: block !important;
+         position: relative;
+         left: -45px;
+         top: 80px;
+         display: flex;
+      }
+   }
    .content {
       margin: 0 !important;
       .container {
